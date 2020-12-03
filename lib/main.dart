@@ -14,37 +14,47 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children : [
-              Container(
-                child: Text('Container 1'),
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.blue,
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('images/Capture.PNG'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text('Container 2.1'),
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.white,
-                  ),
-                  Container(
-                    child: Text('Container 2.2'),
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.white10,
-                  ),
-                ],
+              Text(
+                'Irfan Tiawan',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Flutter Developer',
+                style: TextStyle(
+                  fontSize: 25.0,
+                  color: Colors.white,
+                ),
               ),
               Container(
-                width: 100.0,
-                height: double.infinity,
-                child: Text('Container 3'),
-                color: Colors.red,
+                margin: EdgeInsets.all(20.0),
+                padding: EdgeInsets.fromLTRB(10, 3, 10, 3),
+                color: Colors.white,
+                height: 50.0,
+                child: Row(
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      width: 50,
+                      margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                      child: Text('data'),
+                    ),
+                    Container(
+                      color: Colors.yellow,
+                      child: Text('data'),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
