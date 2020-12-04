@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -32,28 +33,63 @@ class MyApp extends StatelessWidget {
               Text(
                 'Flutter Developer',
                 style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
                   fontSize: 25.0,
-                  color: Colors.white,
+                  color: Colors.teal[100],
+                  letterSpacing: 2.5,
                 ),
               ),
-              Container(
-                margin: EdgeInsets.all(20.0),
-                padding: EdgeInsets.fromLTRB(10, 3, 10, 3),
-                color: Colors.white,
-                height: 50.0,
-                child: Row(
-                  children: [
-                    Container(
-                      color: Colors.red,
-                      width: 50,
-                      margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
-                      child: Text('data'),
+              SizedBox(
+                height: 20.0,
+                width: 120.0,
+                child: Divider(
+                  color : Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal : 25.0,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone_android,
+                      color: Colors.grey,
                     ),
-                    Container(
-                      color: Colors.yellow,
-                      child: Text('data'),
+                    title: Text(
+                      '0877 6422 7266',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 18.0,
+                        color: Colors.teal.shade400,
+                      ),
                     ),
-                  ],
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal : 25.0,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.grey,
+                    ),
+                    title: Text(
+                      'agustiawanirfan866@gmail.com',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 18.0,
+                        color: Colors.teal.shade400,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],
